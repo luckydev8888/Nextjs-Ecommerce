@@ -241,3 +241,80 @@ export const productItems = [
     },
 
 ];
+
+export const manufacturers = ["Klingspor", "Norton", "VSM"];
+
+export const machineIcons = [
+    "air-drum.png",
+    "back-stand-grinding-machine.png",
+    "centerless-grinding-machine.png",
+    "contour-grinding-machine.png",
+    "cross-belt-sanding.png",
+    "drum-grinder.png",
+    "dynafile-sander.png",
+    "edge-sanding-machine.png",
+    "flat-grinding-machine.png",
+    "floor-sander.png",
+    "hand-tool-belt-grinder.png",
+    "long-belt-grinding-machine.png",
+    "orbital-sander.png",
+    "planetary-grinding.png",
+    "portable-belt-sander.png",
+    "robotic-grinding.png",
+    "slack-of-belt.png",
+    "tube-return-grinder.png",
+    "wide-belt-grinding-machine.png",
+
+];
+
+export const materialIcons = [
+    { src: "aluminum.png", name: "aluminum" },
+    { src: "composite.png", name: "composite" },
+    { src: "glass.png", name: "glass" },
+    { src: "lacquer.png", name: "lacquer" },
+    { src: "metal.png", name: "metal" },
+    { src: "nonferrousmetal.png", name: "nonferrousmetal" },
+    { src: "plastic.png", name: "plastic" },
+    { src: "stainlesssteel.png", name: "stainlesssteel" },
+    { src: "steel.png", name: "steel" },
+    { src: "superalloys.png", name: "superalloys" },
+    { src: "wood.png", name: "wood" },
+];
+
+export const grainTypes = [
+    "Aluminium oxide",
+    "Ceramic aluminium oxide",
+    "Zirconia alumina",
+    "Silicon carbide",
+    "Cork",
+    "Silicon carbide + Cork",
+    "Aluminium oxide compact grain",
+    "Silicon carbide compact grain",
+    "Diamond",
+    "Cubic Boron Nitride",
+    "Felt",
+];
+
+export const baseMaterials = [
+    "Cloth",
+    "Paper",
+    "Polyester",
+    "Film",
+    "Paper+Cloth",
+    "Paper+Foam",
+    "Polyamid net",
+    "Nonwoven cloth",
+];
+
+export const coatingTypes = [
+    "Closed coating",
+    "Semi-open coating",
+    "Semi-closed coating",
+    "Open coating",
+];
+
+export const gritOptions = [
+    "16", "20", "24", "30", "36", "40", "50", "60", "80", "100",
+    "120", "150", "180", "220", "240", "280", "320", "360", "400",
+    "500", "600", "800", "1000", "1200", "1500", "2000",
+];
