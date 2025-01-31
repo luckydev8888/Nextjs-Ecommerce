@@ -10,16 +10,20 @@ const Footer = () => {
                 {/* Products */}
                 <div>
                     <h3 className="text-lg font-bold text-[#B08968] mb-2">PRODUCTS</h3>
-                    <ul className="space-y-1">
-                        <li>Abrasive Belts</li>
-                        <li>Hard Abrasives</li>
-                        <li>Flexible Abrasives</li>
-                        <li>Diamond Abrasives</li>
-                        <li>Felt Products</li>
-                        <li>Polishing Pastes</li>
-                        <li>Polishing Wheels</li>
-                        <li>Sandpaper</li>
-                    </ul>
+                    <div className="grid grid-cols-2 gap-4">
+                        <ul className="space-y-1">
+                            <li>Abrasive Belts</li>
+                            <li>Hard Abrasives</li>
+                            <li>Flexible Abrasives</li>
+                            <li>Diamond Abrasives</li>
+                        </ul>
+                        <ul className="space-y-1">
+                            <li>Felt Products</li>
+                            <li>Polishing Pastes</li>
+                            <li>Polishing Wheels</li>
+                            <li>Sandpaper</li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Address */}
@@ -40,10 +44,10 @@ const Footer = () => {
                     <p className="mt-2">info@abrasive.center</p>
                 </div>
             </div>
-            <div className="container mx-auto mt-8 text-center text-[#B08968] text-sm">
+            <div className="container max-w-[1240px] mx-auto mt-8 p-2 text-center text-[#B08968] text-sm border-t-[1px] border-[ #E1E1E11A]" >
                 Abrasive Center © 1995–2025. All rights reserved.
             </div>
-        </footer>
+        </footer >
     );
 };
 

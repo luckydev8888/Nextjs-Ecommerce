@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-// import { productItems } from "@/config/constant";
-// import ProductItem from "./_components/ProductItem";
+import { productItems } from "@/config/constant";
+import ProductItem from "./_components/ProductItem";
 import Image from "next/image";
 
 const manufacturers = ["Klingspor", "Norton", "VSM"];
@@ -84,7 +84,7 @@ const gritOptions = [
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [selectedManufacturer, setSelectedManufacturer] = useState("");
+  // const [selectedManufacturer, setSelectedManufacturer] = useState("");
 
   const [selectedMachines, setSelectedMachines] = useState<string[]>([]);
 
@@ -106,7 +106,7 @@ const Home = () => {
   // Function to reset all filters to their initial states
   const resetFilters = () => {
     setSearchTerm("");
-    setSelectedManufacturer("");
+    // setSelectedManufacturer("");
     setSelectedMachines([]);
     setSelectedMaterials([]);
     setIsWetGrinding(false);
@@ -126,7 +126,7 @@ const Home = () => {
   };
 
   const handleManufacturerSelect = (manufacturer: string) => {
-    setSelectedManufacturer(manufacturer);
+    // setSelectedManufacturer(manufacturer);
     setSearchTerm(manufacturer);
     setIsDropdownOpen(false);
   };
@@ -397,20 +397,57 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Product Items
-          <div className="col-span-9">
-            <div className="grid grid-cols-12">
+          {/* Product Items */}
+          <div className="col-span-9 my-12 mx-12">
+            <div className="grid grid-cols-12 gap-4">
               {productItems.map((item) => (
                 <div
-                  className="col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3 border border-1 border-gray-500"
+                  className="col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3"
                   key={item.id}
                 >
-                  <ProductItem id={item.id} name={item.name} />
+                  <ProductItem
+                    name={item.name}
+                    image={item.image}
+                    overlayImage={item.overlayImage}
+                  />
                 </div>
               ))}
             </div>
-          </div> */}
+            {/* CTA Section */}
+            <div
+              className="relative mt-12 text-white py-12"
+              style={{
+                backgroundImage: "url('/image/backgrounds/cta-bckg-o3.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="text-center">
+                <h2 className="text-2xl font-bold mb-4">
+                  Need help selecting the most suitable abrasives for your project?
+                </h2>
+                <p className="text-lg">
+                  Please{" "}
+                  <a
+                    href="/contact"
+                    className="text-yellow-400 border border-yellow-500 p-2 hover:text-white hover:bg-yellow-500"
+                  >
+                    contact us
+                  </a>{" "}
+                  or check{" "}
+                  <a
+                    href="/products"
+                    className="text-yellow-400 border border-yellow-500 p-2 hover:text-white hover:bg-yellow-500"
+                  >
+                    our production
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
         </div >
+
       </div >
     </>
   );
